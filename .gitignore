@@ -1,0 +1,9 @@
+Ignore these files:
+
+.vscode
+
+.sanity
+
+package-lock.json
+
+node_moduless
