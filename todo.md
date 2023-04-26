@@ -8,11 +8,18 @@
 		- Colors, Fonts, Grid
 
 # Frontend
-	- Modules
-		- Navigation
-		- Cart
-		- Products
-		- Footer
+	CSS
+		- Modules
+			- Navigation
+			- Cart
+			- Products
+			- Footer
+	JS
+		- Modules
+			- Navigation
+			- Cart
+			- Products
+			- Footer
 
 # Backend (Sanity)
 	- Set up project
@@ -24,5 +31,8 @@
 			- Contact
 
 # Questions
-	- Rem or vw on text variables
+	- Syntax:
+		- __
+		- Navigation
+		- Navigation links
 	- 
