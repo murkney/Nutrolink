@@ -1,0 +1,10 @@
+body {
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	text-transform: uppercase;
+	-webkit-font-smoothing: antialiased;
+}
+
+main {
+	padding: var(--gap-padding);
+}

@@ -1,0 +1,27 @@
+:root {
+	/* Colors */
+	--primary-color: #fff;
+	--secondary-color: #36474e;
+	--tertiary-colo: orange;
+	--quaternary-color: black;
+
+	/* Font-sizes */
+	--heading-text: 2.188rem;
+	--sub-text: 1.875rem;
+	--body-text: 1rem;
+	--small-text: 0.875rem;
+
+	--heading-text-mobile: 1.313rem;
+	--sub-text-mobile: 1.125rem;
+	--body-text-mobile: 0.875rem;
+	--small-text-mobile: 0.75rem;
+
+	/* Gaps */
+	--gap-column: 1rem;
+	--gap-padding: 1rem;
+	--gap-row: 1rem;
+	--gap-section: 2rem;
+
+	--gap-box-padding: 1rem;
+	--gap-button-padding: 0.5rem;
+}
