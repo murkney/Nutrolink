@@ -1,12 +1,13 @@
 :root {
 	/* Colors */
 	--primary-color: #fff;
-	--secondary-color: #36474e;
+	--secondary-color: #2e3d44;
 	--tertiary-color: orange;
 	--quaternary-color: black;
 
 	/* Font-families */
 	--cinzel-font: 'Cinzel', serif;
+	--ace-font: 'Bruno Ace SC', cursive;
 
 	/* Font-sizes */
 	--heading-text: 2.188rem;
