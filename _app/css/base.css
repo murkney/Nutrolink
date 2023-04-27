@@ -2,7 +2,7 @@ body {
 	text-transform: uppercase;
 	color: var(--secondary-color);
 	-webkit-font-smoothing: antialiased;
-	background-color: var(--primary-color);
+	background-color: var(--background-color);
 }
 
 main {
