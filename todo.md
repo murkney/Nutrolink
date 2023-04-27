@@ -10,6 +10,7 @@
 # Frontend
 	CSS
 		- Modules
+			- Header
 			- Navigation
 			- Cart
 			- Products
@@ -35,4 +36,5 @@
 		- __
 		- Navigation
 		- Navigation links
-	- 
+	- Header visible or active?
+	-
