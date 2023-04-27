@@ -1,10 +1,14 @@
 body {
-	background-color: var(--primary-color);
-	color: var(--secondary-color);
 	text-transform: uppercase;
+	color: var(--secondary-color);
 	-webkit-font-smoothing: antialiased;
+	background-color: var(--primary-color);
 }
 
 main {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
 	padding: var(--gap-padding);
 }
