@@ -1,5 +1,6 @@
 .footer {
 	background-color: var(--secondary-color);
+	width: 100vw;
 }
 
 .footer .box-container {
@@ -53,16 +54,20 @@
 
 @media only screen and (max-width: 768px) {
 
+	.footer .box-container {
+		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	}
+
 	.footer .box-container .box h3 {
-		font-size: var(--subheading-text-size-mobile);
+		font-size: var(--subheading-text-mobile);
 	}
 
 	.footer .box-container .box a {
-		font-size: var(--body-text-size-mobile);
+		font-size: var(--body-text-mobile);
 	}
 
 	.footer .credit {
-		font-size: var(--body-text-size-mobile);
+		font-size: var(--body-text-mobile);
 	}
 
 }
