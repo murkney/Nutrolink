@@ -1,6 +1,6 @@
 .slideshow {
 	width: 75vw;
-	height: 75vh;
+	height: 60vh;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -30,7 +30,7 @@
 	z-index: 2;
 	background: none;
 	border: none;
-	font-size: 4rem;
+	font-size: 3rem;
 	top: 50%;
 	transform: translateY(-50%);
 	color: rgba(255, 255, 255, .5);
@@ -51,11 +51,11 @@
 }
 
 .slideshow-button.prev {
-	left: 1rem;
+	left: 0;
 }
 
 .slideshow-button.next {
-	right: 1rem;
+	right: 0;
 }
 
 .slideshow-dots {
