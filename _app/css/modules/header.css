@@ -42,10 +42,13 @@
 	margin: 0 0.5rem;
 }
 
-.header__navigation-icon:hover {
-	color: var(--tertiary-color);
+#cart-icon {
+	color: var(--secondary-color);
 }
 
+#cart-icon:hover {
+	color: var(--tertiary-color);
+}
 #menu-bars {
 	display: none;
 }
@@ -53,6 +56,10 @@
 @media only screen and (max-width: 1024px) {
 	#menu-bars {
 		display: block;
+	}
+
+	#menu-bars:hover {
+		color: var(--tertiary-color);
 	}
 
 	.fa-times {
