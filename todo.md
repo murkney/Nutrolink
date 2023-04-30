@@ -37,4 +37,10 @@
 		- Navigation
 		- Navigation links
 	- Header visible or active?
-	-
+	- Delete these files:
+		- package.json?
+		- package-lock.json?
+	- Gitignore:
+		- sanity.js?
+		- sanity-client.js?
+		- Files that expose keys?
