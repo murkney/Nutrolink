@@ -27,6 +27,8 @@
 	transform: scale(1.03);
 	border: .025rem solid var(--secondary-color);
 	border-radius: 0 0 .3rem;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	cursor: pointer;
 }
 
 .product-item__title {
