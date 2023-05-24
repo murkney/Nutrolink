@@ -31,6 +31,15 @@
 			- About us
 			- Contact
 
+# Sprints
+	- Sprint 1:
+		- Monday
+			- MVP description
+			- 
+			
+	- Sprint 2:
+		- 
+
 # Questions
 	- Syntax:
 		- __
