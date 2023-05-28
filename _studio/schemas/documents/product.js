@@ -35,7 +35,14 @@ export default {
 		{
 			title: 'Category',
 			name: 'category',
-			type: 'string'
+			type: 'reference',
+			to: { type: 'category' }
+		},
+		{
+			title: 'SubCategory',
+			name: 'subcategory',
+			type: 'reference',
+			to: { type: 'subcategory' }
 		},
 		{
 			title: 'Ingridients',
