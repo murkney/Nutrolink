@@ -150,7 +150,7 @@ header {
 	.product-navigation.active {
 		left: 0;
 		right: 0;
-		top: 10vh;
+		top: 9vh;
 		display: flex;
 		position: fixed;
 		flex-flow: column;
