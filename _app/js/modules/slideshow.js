@@ -1,6 +1,5 @@
 export default function Slideshow() {
 	document.addEventListener('DOMContentLoaded', function() {
-		// Get all the necessary elements
 		const slides = Array.from(document.querySelectorAll('.slide'));
 		const dots = Array.from(document.querySelectorAll('.dot'));
 		const prevButton = document.querySelector('.prev');
@@ -12,7 +11,6 @@ export default function Slideshow() {
 
 		// Function to show the current slide
 		function showSlide(index) {
-			// Hide all slides and remove active state from dots
 			slides.forEach(function(slide) {
 				slide.removeAttribute('data-active');
 			});
@@ -20,7 +18,6 @@ export default function Slideshow() {
 				dot.classList.remove('dot--active');
 			});
 
-			// Show the current slide and set active state for the corresponding dot
 			slides[index].setAttribute('data-active', '');
 			dots[index].classList.add('dot--active');
 		}
