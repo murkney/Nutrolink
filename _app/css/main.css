@@ -6,4 +6,7 @@
 @import './modules/header.css';
 @import './modules/slideshow.css';
 @import './modules/main-products.css';
+@import './modules/product.css';
+@import './modules/supplements.css';
+@import './modules/performance.css';
 @import './modules/footer.css';
