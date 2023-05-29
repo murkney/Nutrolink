@@ -5,6 +5,7 @@ export default async function ProductList() {
 		_id,
 		title,
 		"image": image.asset->url,
+		'slug': slug.current,
 		price,
 		description
 	}`;
@@ -15,7 +16,7 @@ export default async function ProductList() {
 		for (const product of products) {
 			const productContainer = document.getElementById('products-container');
 			
-			const productItem = document.createElement('div');
+			const productItem = document.createElement('a');
 			const productTitle = document.createElement('h2');
 			const productImage = document.createElement('img');
 			const productPrice = document.createElement('h2');
@@ -27,6 +28,7 @@ export default async function ProductList() {
 			productPrice.className = 'product-item__price';
 			productAddCart.className = 'bx bx-shopping-bag product-item__add';
 
+			productItem.href = `/product/?${product.slug}`;
 			productTitle.innerText = product.title;
 			productImage.src = product.image;
 			productPrice.innerText = `${product.price},- kr`;
@@ -46,4 +48,5 @@ export default async function ProductList() {
 	};
 
 	renderHTML();
+	
 };
