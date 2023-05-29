@@ -34,6 +34,7 @@ export default async function ProductList() {
 			productPrice.innerText = `${product.price},- kr`;
 
 			productContainer.appendChild(productItem);
+			
 			productItem.append(
 				productTitle,
 				productImage,
