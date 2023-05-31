@@ -2,17 +2,21 @@ import Navigation from "./modules/navigation.js";
 import Slideshow from "./modules/slideshow.js";
 import ProductList from "./modules/main-products.js";
 import renderProductPage from "./modules/render-product.js";
-// import supplementList from "./modules/supplements.js";
-// import performanceList from "./modules/performance.js";
+import renderCategoryPage from "./modules/render-category.js";
+import renderSubCategoryPage from "./modules/render-subcategory.js";
 import { readURL } from "./util/read-url.js";
 
+const mainPage = document.querySelector('.slideshow');
+
 Navigation();
-Slideshow();
-ProductList();
-// renderProductPage();
-// supplementList();
-// performanceList();
+
+if (mainPage) {
+	Slideshow();
+	ProductList();
+}
 
 if (readURL() !== undefined) {
-	renderProductPage()
+	renderProductPage();
+	renderCategoryPage();
+	renderSubCategoryPage();
 }

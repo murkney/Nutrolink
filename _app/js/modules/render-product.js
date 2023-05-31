@@ -3,13 +3,11 @@ import { readURL } from "../util/read-url.js";
 
 export default async function renderProductPage() {
 	const slug = readURL();
-	console.log(slug)
-
-	const query = `*[slug.current == '${slug}'] {
+	const query = `*[_type == 'product' && slug.current == '${slug}'] {
 		_id,
 		title,
 		'slug': slug.current,
-		"image": image.asset->url,
+		'image': image.asset->url,
 		price,
 		description,
 		ingridients
@@ -19,7 +17,7 @@ export default async function renderProductPage() {
 
 	function createProductContainerDOM() {
 		for (const staticProductItem of staticProductItems) {
-			// console.log(staticProductItem);
+
 			const staticProductContainer = document.getElementById('product-container');
 			
 			const staticProduct = document.createElement('div');
@@ -44,7 +42,6 @@ export default async function renderProductPage() {
 			staticProductImage.src = staticProductItem.image;
 			staticProductDescription.innerText = staticProductItem.description;
 			staticProductPrice.innerText = `${staticProductItem.price},- kr`;
-			// staticProductAddCart.href = ;
 
 			staticProductContainer.appendChild(staticProduct);
 
