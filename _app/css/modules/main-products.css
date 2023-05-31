@@ -36,7 +36,7 @@
 	text-align: center;
 	color: var(--secondary-color);
 	font-size: 1.35rem;
-	font-size: var(--nav-text);
+	font-size: var(--body-text);
 	font-family: var(--ace-font);
 	border-bottom: 2px solid var(--secondary-color);
 }
