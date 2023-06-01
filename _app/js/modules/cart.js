@@ -16,26 +16,18 @@ export default async function Cart() {
 	let closeCart = document.querySelector("#close-cart");
 
 	// Open cart
-	cartIcon.onclick = () => {
+	cartIcon.addEventListener('click', handleCartIconClick);
+
+	function handleCartIconClick() {
 		cart.classList.add("active");
 	};
 
-	// cartIcon.addEventListener('click', handleCartIconClick);
-
-	// function handleCartIconClick() {
-	// 	cart.classList.add("active");
-	// };
-
 	// Close cart
-	closeCart.onclick = () => {
+	closeCart.addEventListener('click', handleCloseCartClick);
+
+	function handleCloseCartClick() {
 		cart.classList.remove("active");
 	};
-
-	// closeCart.addEventListener('click', handleCloseCartClick);
-
-	// function handleCloseCartClick() {
-	// 	cart.classList.remove("active");
-	// };
 
 	// Cart working JS
 	if (document.readyState == "loading") {
