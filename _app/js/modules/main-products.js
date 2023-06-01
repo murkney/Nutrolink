@@ -1,5 +1,4 @@
 import { sanity } from "../sanity.js";
-// import Cart from "./cart.js";
 
 export default async function ProductList() {
 	const query = `*[_type == 'product'] | order(title asc) {
@@ -30,12 +29,6 @@ export default async function ProductList() {
 			productImage.className = 'product-item__image';
 			productPrice.className = 'product-item__price';
 			productAddCart.className = 'bx bx-shopping-bag product-item__add';
-
-			// productAddCart.addEventListener('click', handleAddToCart);
-
-			// function handleAddToCart() {
-			// 	Cart(product);
-			// }
 
 			productItem.href = `/product/?${product.slug}`;
 			productTitle.innerText = product.title;
