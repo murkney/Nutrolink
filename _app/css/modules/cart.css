@@ -29,6 +29,8 @@
 	align-items: center;
 	gap: 1rem;
 	margin-top: 1rem;
+	border-left: 1px solid var(--secondary-color);
+	border-bottom: 1px solid var(--secondary-color);
 }
 
 .cart-img {
@@ -92,8 +94,7 @@
 	margin: 1.5rem auto 0 auto;
 	padding: 12px 20px;
 	border: 1px solid var(--primary-color);
-	background: var(--main-color);
-	color: var(--primary-color);
+	color: var(--secondary-color);
 	font-size: 1rem;
 	font-weight: 500;
 	cursor: pointer;
