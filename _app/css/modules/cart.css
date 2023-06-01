@@ -3,7 +3,7 @@
 	top: 0;
 	right: -100%;
 	width: 300px;
-	min-height: 100vh;
+	max-height: 100vh;
 	padding: 1rem;
 	background: var(--tertiary-color);
 	box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
@@ -91,7 +91,6 @@
 	display: flex;
 	margin: 1.5rem auto 0 auto;
 	padding: 12px 20px;
-	/* border: none; */
 	border: 1px solid var(--primary-color);
 	background: var(--main-color);
 	color: var(--primary-color);
@@ -101,7 +100,15 @@
 }
 
 .btn-buy:hover, .btn-clear:hover {
-	background: var(--text-color);
+	background: var(--primary-color);
+}
+
+.btn-buy:hover {
+	color: green;
+}
+
+.btn-clear:hover {
+	color: red;
 }
 
 /* #cart-icon {
