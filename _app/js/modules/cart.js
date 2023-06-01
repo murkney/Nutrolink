@@ -66,7 +66,10 @@ export default async function Cart() {
 		document
 			.getElementsByClassName("btn-clear")[0]
 			.addEventListener("click", clearButtonClicked);
-	}
+
+		// Load cart items from local storage
+		loadCartItems();
+	};
 
 	// Making Function for buy button
 	function buyButtonClicked() {
@@ -76,6 +79,11 @@ export default async function Cart() {
 			cartContent.removeChild(cartContent.firstChild);
 		}
 		updateTotal();
+
+		// Clear cart items from local storage
+		clearCartItems();
+
+		cart.classList.remove("active");
 	}
 
 	// Making function for clear cart button
@@ -85,6 +93,12 @@ export default async function Cart() {
 			cartContent.removeChild(cartContent.firstChild);
 		}
 		updateTotal();
+
+		// Clear cart items from local storage
+		clearCartItems();
+
+		cart.classList.remove("active");
+
 	}
 
 	// Making Function to remove items from cart 
@@ -92,6 +106,10 @@ export default async function Cart() {
 		var buttonClicked = event.target;
 		buttonClicked.parentElement.remove();
 		updateTotal();
+
+		// Update cart items in local storage
+		updateCartItems();
+
 	};
 
 	// Quantity changes
@@ -101,6 +119,10 @@ export default async function Cart() {
 			input.value = 1;
 		}
 		updateTotal();
+
+		// Update cart items in local storage
+		updateCartItems();
+
 	};
 
 	// Add To Cart
@@ -113,6 +135,10 @@ export default async function Cart() {
 		addProductToCart(title, price, productImg);
 		updateTotal();
 		cart.classList.add("active");
+
+		// Update cart items in local storage
+		updateCartItems();
+
 	};
 
 	function addProductToCart(title, price, productImg) {
@@ -164,10 +190,57 @@ export default async function Cart() {
 			total = total + price * quantity;
 		}
 		
-		// If price contains cents in value
 		total = Math.round(total * 100) / 100;
 
-		// document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 		document.getElementsByClassName("total-price")[0].innerText = total + ",- NOK";
+
+		// Update total in local storage
+		localStorage.setItem("cartTotal", total);
 	};
+
+	// Function to load cart items from local storage
+	function loadCartItems() {
+		var cartItems = localStorage.getItem("cartItems");
+		if (cartItems) {
+		var cartContent = document.getElementsByClassName("cart-content")[0];
+		cartContent.innerHTML = cartItems;
+			updateTotal();
+			attachCartEvents();
+		}
+	}
+	
+	// Function to update cart items in local storage
+	function updateCartItems() {
+		var cartContent = document.getElementsByClassName("cart-content")[0];
+		var cartItems = cartContent.innerHTML;
+		localStorage.setItem("cartItems", cartItems);
+	}
+	
+	// Function to clear cart items from local storage
+	function clearCartItems() {
+		localStorage.removeItem("cartItems");
+		localStorage.removeItem("cartTotal");
+	}
+	
+	// Attach events to cart items after loading from local storage
+	function attachCartEvents() {
+		var removeCartButtons = document.getElementsByClassName("cart-remove");
+		for (var i = 0; i < removeCartButtons.length; i++) {
+		var button = removeCartButtons[i];
+		button.addEventListener("click", removeCartItem);
+		}
+		var quantityInputs = document.getElementsByClassName('cart-quantity');
+		for (var i = 0; i < quantityInputs.length; i++) {
+		var input = quantityInputs[i];
+		input.addEventListener("change", quantityChanged);
+		}
+	}
+	
+	// Load cart total from local storage on page load
+	window.addEventListener("load", function () {
+		var cartTotal = localStorage.getItem("cartTotal");
+		if (cartTotal) {
+		document.getElementsByClassName("total-price")[0].innerText = cartTotal + ",- NOK";
+		}
+ 	});
 };
