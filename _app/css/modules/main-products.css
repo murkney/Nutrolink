@@ -16,12 +16,19 @@
 	padding: var(--gap-column);
 }
 
-.product-item {
+.product-item__container {
 	position: relative;
 	padding: 1rem;	
 	margin: 1.5rem;
 	background-color: var(--background-color);
 }
+
+/* .product-item {
+	position: relative;
+	padding: 1rem;	
+	margin: 1.5rem;
+	background-color: var(--background-color);
+} */
 
 .product-item:hover {
 	transform: scale(1.03);

@@ -177,7 +177,6 @@ header {
 	}
 
 	.fa-times {
-		transform: rotate(180deg);
-		font-size: 1.75rem;
+		font-size: 2rem;
 	}
 }

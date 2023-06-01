@@ -10,12 +10,13 @@
 
 		<link rel="stylesheet" href="/_app/css/main.css">
 		<script type="module" src="/_app/js/main.js"></script>
+		<script type="module" src="/_app/js/static-page.js"></script>
 	</head>
 	
 	<body>
 		<!-- Header section starts -->
 		<header>
-			<a href="/index.html" class="logo">
+			<a href="/index.html" class="logo" id="homepage">
 				<img src="/_app/assets/logo/logo.svg" alt="nutrolink-logo">
 			</a>
 			<section class="header-navigation">
@@ -83,12 +84,30 @@
 						</ul>
 					</nav>
 					<div class="user-options">
+						<a href="#" class="navigation-icon fa-solid fa-user" id="user-icon"></a>
 						<a href="#" class="navigation-icon bx bx-shopping-bag" id="cart-icon"></a>
-						<a href="#" class="navigation-icon fa-solid fa-user" id="cart-icon"></a>
 						<div class="navigation-icon fas fa-bars" id="menu-bars"></div>
 					</div>
 				</nav>
 			</section>
+			<!-- Cart -->
+         <div class="cart">
+            <h2 class="cart-title">Your Cart</h2>
+            <!-- Content -->
+            <div class="cart-content"></div>
+            <!-- Total -->
+            <div class="total">
+               <div class="total-title">Total</div>
+               <div class="total-price">0,- NOK </div>
+            </div>
+            <!-- Buy Button -->
+            <div class="cart__button-container">
+               <button type="button" class="btn-buy">Buy Now</button>
+               <button type="button" class="btn-clear">Clear Cart</button>
+            </div>
+            <!-- Cart close -->
+            <i class='bx bx-x' id="close-cart"></i>
+         </div>
 		</header>
 		<!-- Header section ends -->
 		<!-- Main section starts -->

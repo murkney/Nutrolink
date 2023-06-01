@@ -11,9 +11,11 @@ export default function Slideshow() {
 
 		// Function to show the current slide
 		function showSlide(index) {
+			
 			slides.forEach(function(slide) {
 				slide.removeAttribute('data-active');
 			});
+			
 			dots.forEach(function(dot) {
 				dot.classList.remove('dot--active');
 			});

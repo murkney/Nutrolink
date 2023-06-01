@@ -5,6 +5,7 @@
 @import './grid.css';
 
 @import './modules/header.css';
+@import './modules/cart.css';
 @import './modules/slideshow.css';
 @import './modules/main-products.css';
 @import './modules/product.css';
