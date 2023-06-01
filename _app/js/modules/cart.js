@@ -19,7 +19,7 @@ export default async function Cart() {
 	cartIcon.addEventListener('click', handleCartIconClick);
 
 	function handleCartIconClick() {
-		cart.classList.add("active");
+		cart.classList.toggle("active");
 	};
 
 	// Close cart
