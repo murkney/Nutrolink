@@ -19,12 +19,14 @@ export default async function renderCategoryPage() {
 
 			const categoryContainer = document.getElementById('category-container');
 			
+			const staticCategoryProductItemContainer = document.createElement('div')
 			const staticCategoryProductItem = document.createElement('a');
 			const staticCategoryProductTitle = document.createElement('h2');
 			const staticCategoryProductImage = document.createElement('img');
 			const staticCategoryProductPrice = document.createElement('h2');
-			const staticCategoryProductAddCart = document.createElement('i');
+			const staticCategoryProductAddCart = document.createElement('button');
 			
+			staticCategoryProductItemContainer.className = 'product-item__container';
 			staticCategoryProductItem.className = 'product-item';
 			staticCategoryProductTitle.className = 'product-item__title';
 			staticCategoryProductImage.className = 'product-item__image';
@@ -36,13 +38,17 @@ export default async function renderCategoryPage() {
 			staticCategoryProductImage.src = staticCategoryItem.image;
 			staticCategoryProductPrice.innerText = `${staticCategoryItem.price},- kr`;
 
-			categoryContainer.appendChild(staticCategoryProductItem);
+			categoryContainer.appendChild(staticCategoryProductItemContainer);
+
+			staticCategoryProductItemContainer.append(
+				staticCategoryProductItem,
+				staticCategoryProductAddCart
+			);
 
 			staticCategoryProductItem.append(
 				staticCategoryProductTitle,
 				staticCategoryProductImage,
-				staticCategoryProductPrice,
-				staticCategoryProductAddCart
+				staticCategoryProductPrice
 			);
 		};		
 	};

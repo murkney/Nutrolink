@@ -19,12 +19,14 @@ export default async function renderSubCategoryPage() {
 
 			const subCategoryContainer = document.getElementById('subcategory-container');
 			
+			const staticSubCategoryProductItemContainer = document.createElement('div')
 			const staticSubCategoryProductItem = document.createElement('a');
 			const staticSubCategoryProductTitle = document.createElement('h2');
 			const staticSubCategoryProductImage = document.createElement('img');
 			const staticSubCategoryProductPrice = document.createElement('h2');
-			const staticSubCategoryProductAddCart = document.createElement('i');
+			const staticSubCategoryProductAddCart = document.createElement('button');
 			
+			staticSubCategoryProductItemContainer.className = 'product-item__container';
 			staticSubCategoryProductItem.className = 'product-item';
 			staticSubCategoryProductTitle.className = 'product-item__title';
 			staticSubCategoryProductImage.className = 'product-item__image';
@@ -36,13 +38,17 @@ export default async function renderSubCategoryPage() {
 			staticSubCategoryProductImage.src = staticSubCategoryItem.image;
 			staticSubCategoryProductPrice.innerText = `${staticSubCategoryItem.price},- kr`;
 
-			subCategoryContainer.appendChild(staticSubCategoryProductItem);
+			subCategoryContainer.appendChild(staticSubCategoryProductItemContainer);
+
+			staticSubCategoryProductItemContainer.append(
+				staticSubCategoryProductItem,
+				staticSubCategoryProductAddCart
+			);
 
 			staticSubCategoryProductItem.append(
 				staticSubCategoryProductTitle,
 				staticSubCategoryProductImage,
-				staticSubCategoryProductPrice,
-				staticSubCategoryProductAddCart
+				staticSubCategoryProductPrice
 			);
 		};		
 	};

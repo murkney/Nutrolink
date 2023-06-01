@@ -36,7 +36,9 @@ export default async function renderProductPage() {
 			staticProductDetails.className = 'static-product__details';
 			staticProductDescription.className = 'static-product__description';
 			staticProductPrice.className = 'static-product__price';
-			staticProductAddCart.className = 'bx bx-shopping-bag static-product__add';
+			// staticProductAddCart.className = 'bx bx-shopping-bag static-product__add';
+			staticProductAddCart.className = 'bx bx-shopping-bag product-item__add';
+
 
 			staticProductTitle.innerText = staticProductItem.title;
 			staticProductImage.src = staticProductItem.image;
