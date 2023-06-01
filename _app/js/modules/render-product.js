@@ -30,13 +30,13 @@ export default async function renderProductPage() {
 			const staticProductAddCart = document.createElement('button');
 			
 			staticProduct.className = 'static-product';
-			staticProductTitle.className = 'static-product__title';
+			staticProductTitle.className = 'product-item__title';
 			staticProductDivider.className = 'static-product__devider';
 			staticProductImage.className = 'static-product__image';
+			staticProductImage.className = 'product-item__image';
 			staticProductDetails.className = 'static-product__details';
 			staticProductDescription.className = 'static-product__description';
-			staticProductPrice.className = 'static-product__price';
-			// staticProductAddCart.className = 'bx bx-shopping-bag static-product__add';
+			staticProductPrice.className = 'product-item__price';
 			staticProductAddCart.className = 'bx bx-shopping-bag product-item__add';
 
 
