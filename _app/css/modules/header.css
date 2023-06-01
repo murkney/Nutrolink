@@ -159,6 +159,10 @@ header {
 		background: var(--secondary-color);
 	}
 
+	.general-navigation ul.menu li:hover .dropdown {
+		display: none;
+	}
+
 	.menu-link {
 		margin: 1rem;
 		padding: 1rem;
@@ -179,4 +183,32 @@ header {
 	.fa-times {
 		font-size: 2rem;
 	}
+}
+
+@media (max-width: 768px) {
+	.navigation-icon {
+		margin: 0 .25rem;
+	}
+
+	.product-navigation ul.menu li a {
+		font-size: var(--body-text-mobile);
+	}
+
+	.fa-times {
+		font-size: var(--sub-text);
+	}
+}
+
+@media (max-width: 500px) {
+
+	.product-navigation ul.menu li a {
+		font-size: var(--small-text-mobile);
+		padding: .25rem 1rem 0;
+	}
+
+	.menu-link {
+		margin: 0;
+		padding: 0;
+	}
+
 }
